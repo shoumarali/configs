@@ -2,11 +2,26 @@ server:
   port: 8070
 
 eureka:
-  # instance:
-  #   hostname: localhost
+  instance:
+    hostname: eureka-server  
+    preferIpAddress: false
   client:
-    fetchRegistry: false
     registerWithEureka: false
-    # serviceUrl:
-    #   defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-    
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
