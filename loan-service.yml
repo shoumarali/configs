@@ -5,17 +5,44 @@ spring:
   jpa:
     show-sql: true
 
+  sql:
+    init:
+      mode: always
 
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
+endpoints:
+  shutdown:
+    enabled: true
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: "http://eureka-server:8070/eureka/"
+
+
+info:
+  app:
+    name: "loan-service"
+    version: "1.0.0"
 
 rabbitmq:
   template:
     retry:
       enabled: true
       initial-interval: 2s
-      max-interval: 10s
-~                              
+      max-interval: 10s                              
