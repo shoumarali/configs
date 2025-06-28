@@ -1,2 +1,23 @@
 build:
-  version: "1.0.1"
+  version: "1.0.0"
+
+spring:
+  jpa:
+    show-sql: true
+  
+  sql:
+    init:
+      mode: always
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+rabbitmq:
+  template:
+    retry:
+      enabled: true
+      initial-interval: 2s
+      max-interval: 10s
