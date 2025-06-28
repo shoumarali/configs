@@ -45,5 +45,4 @@ rabbitmq:
     retry:
       enabled: true
       initial-interval: 2s
-      max-interval: 10s                              
-      max-interval: 10s                         
+      max-interval: 10s                                                 
