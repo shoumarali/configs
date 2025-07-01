@@ -1,6 +1,12 @@
 build:
   version: "1.0.0"
 
+spring:
+  cloud:
+    gateway:
+      discovery:
+        enabled: true
+
 management:
   endpoints:
     web:
