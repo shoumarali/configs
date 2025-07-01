@@ -1,0 +1,30 @@
+build:
+  version: "1.0.0"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    gateway:
+      enabled: true  
+  info:
+    env:
+      enabled: true
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: "http://eureka-server:8070/eureka/"
+
+
+info:
+  app:
+    name: "gateway-server"
+    version: "1.0.0"
+
