@@ -36,3 +36,8 @@ info:
     name: "gateway-server"
     version: "1.0.0"
 
+logging:
+  level:
+    com:
+      ashoumar:
+        gateway_server: DEBUG
