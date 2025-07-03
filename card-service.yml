@@ -46,3 +46,9 @@ rabbitmq:
       enabled: true
       initial-interval: 2s
       max-interval: 10s
+
+logging:
+  level:
+    com:
+      ashoumar:
+        card_service: DEBUG
