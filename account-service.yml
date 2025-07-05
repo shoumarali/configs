@@ -17,6 +17,15 @@ management:
   endpoint:
     shutdown:
       enabled: true
+    health:
+      probes:
+        enabled: true
+  
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
   info:
     env:
       enabled: true
@@ -51,5 +60,5 @@ logging:
   level:
     com:
       ashoumar:
-        account_service: DEBUG
+        accounts: DEBUG
 
