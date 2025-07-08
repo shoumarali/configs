@@ -96,3 +96,6 @@ resilience4j:
         waitDuration: 100ms
         enableExponentialBackoff: true
         exponentialBackoffMultiplier: 2
+        ignoreExceptions:
+          - java.lang.NullPointerException
+
