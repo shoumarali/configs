@@ -11,6 +11,11 @@ spring:
       httpclient: 
         connect-timeout: 1000
         response-timeout: 3s
+  data:
+    redis:
+      connect-timeout: 2s
+      timeout: 1s
+
 
 management:
   endpoints:
