@@ -49,6 +49,11 @@ info:
     name: "loan-service"
     version: "1.0.0"
 
+metrics:
+  tags:
+    application: ${spring.application.name}
+
+
 rabbitmq:
   template:
     retry:

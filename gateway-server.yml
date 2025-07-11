@@ -44,6 +44,11 @@ info:
     name: "gateway-server"
     version: "1.0.0"
 
+metrics:
+  tags:
+    application: ${spring.application.name}
+
+
 logging:
   level:
     com:
