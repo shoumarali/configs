@@ -67,4 +67,4 @@ logging:
       ashoumar:
         card_service: DEBUG
   pattern:
-    level: "%5p [${spri
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
