@@ -66,3 +66,5 @@ logging:
     com:
       ashoumar:
         card_service: DEBUG
+  pattern:
+    level: "%5p [${spri
